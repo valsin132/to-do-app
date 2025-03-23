@@ -4,7 +4,7 @@ import { v4 as uuidv4 } from 'uuid';
 
 export const ToDoContext = createContext()
 
-const ToDoContextProvider = (props) => {
+const ToDoContextProvider = ( props ) => {
     const [tasks, setTasks] = useState(() => {
         const localData = localStorage.getItem('tasks');
         return localData ? JSON.parse(localData) : [];
